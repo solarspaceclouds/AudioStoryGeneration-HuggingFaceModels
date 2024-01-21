@@ -25,7 +25,7 @@ def img2text(url): # url of image file
     return text 
 
 # llm: to generate short story based on the image
-def generate_story(scenario, max_length=250, temperature=0.9):
+def generate_story(scenario, max_length=500, temperature=0.9):
     API_URL = "https://api-inference.huggingface.co/models/gpt2"
     headers = {"Authorization": f"Bearer {HUGGINGFACEHUB_API_TOKEN}"}
     
@@ -137,7 +137,7 @@ def main():
             st.markdown("### Generated Story")
             st.write("Using the above caption as a prompt for the story:")
             with st.spinner('Generating story...'):
-                story = generate_story(scenario, max_length=500, temperature=0.8)
+                story = generate_story(scenario, max_length=500, temperature=0.9)
                 story, story_list = get_last_complete_sentence(story)
             st.write(story)
 

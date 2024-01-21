@@ -1,0 +1,2 @@
+dog_with_toys.jpeg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiBttDGhRzsP7OuzPFPNJvzVb3bdBeBzTaow&usqp=CAU'
+friends.jpeg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1HjlRlh4eABbZe1bv-XbRfQnEmkPvPRVQg&usqp=CAU'
