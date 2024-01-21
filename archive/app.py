@@ -38,29 +38,6 @@ def generate_story(scenario, max_length=250, temperature=0.9):
     story = query(payload)[0]["generated_text"]
     return story
 
-# # Example usage
-# scenario = "A mysterious island appears overnight in the middle of the ocean."
-# story = generate_story(scenario)
-# print(story)
-    
-
-
-# import requests
-
-# API_URL = "https://api-inference.huggingface.co/models/lysandre/text-to-speech-pipeline"
-# headers = {"Authorization": "Bearer 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"}
-
-# def query(payload):
-# 	response = requests.post(API_URL, headers=headers, json=payload)
-# 	return response.content
-
-# audio_bytes = query({
-# 	"inputs": "liquid drum and bass, atmospheric synths, airy sounds",
-# })
-# # You can access the audio with IPython.display for example
-# from IPython.display import Audio
-# Audio(audio_bytes)
-
 def text2speech(message):
     API_URL = "https://api-inference.huggingface.co/models/espnet/kan-bayashi_ljspeech_vits"
     headers = {"Authorization":f"Bearer {HUGGINGFACEHUB_API_TOKEN}"}
